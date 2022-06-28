@@ -20,4 +20,4 @@ let b = index.pop()
 arr.splice(a, 1, max)
 arr.splice (b, 1, last )
 
-console.log(index);
+console.log(arr);
