@@ -1,24 +1,23 @@
-let arr7 = [6, -3, 7, -4, 7, 4, -5] // 6 -3 7 -4 -5 4 7
-let max7 = 0
-let index7
-let tmp7
+let arr = [6, -3,  7, -4, 7, 4, 7, -5, 7]
 
-for (let i = 0 ; i<arr7.length; i++) {
-  console.log(max7)
-  if (arr7[i]>max7) {
-    max7 = arr7[i]
-  } else if ( arr7[i]===max7) {
-    max7 =arr7[i]
-  }
-
-   index7 = arr7.lastIndexOf(max7)
-
-   tmp7= arr7[arr7.length-1]
-   arr7[arr7.length-1] =arr7[index7] 
-   arr7[index7] = tmp7
-
-   
-console.log('v lupe index',index7)
+max = 0;
+let index = [];
+let last = arr[arr.length-1]
+for (let i= 0; i < arr.length; i++) {
+  
+    if (arr[i]>max) {
+       max=arr[i];
+    }
 }
-console.log('ne v lupe index',index7)
-console.log(arr7)
+for (let i= 0; i < arr.length; i++) {  
+    if (max===arr[i]) {
+    index.push(i);
+   } 
+}
+
+let a = arr.length-1
+let b = index.pop()
+arr.splice(a, 1, max)
+arr.splice (b, 1, last )
+
+console.log(index);
