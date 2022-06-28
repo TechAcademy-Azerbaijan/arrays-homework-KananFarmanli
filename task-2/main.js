@@ -30,5 +30,6 @@ console.log(index1)
 }
 
 
-console.log(max1, index1); // 34
+console.log(max1)
+console.log(index1); // 34
 });
